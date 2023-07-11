@@ -11,8 +11,16 @@ rspecのアウトラインを表示する拡張機能です。
 
 ## インストール方法
 
-以下の手順をもとに、vsixファイルをインストールしてください。
+1. Releasesから最新のvsixファイルをダウンロード
+2. 以下の手順を参考に、vsixファイルをVSCodeにインストール  
 https://learn.microsoft.com/ja-jp/visualstudio/ide/finding-and-using-visual-studio-extensions?view=vs-2022#install-without-using-the-manage-extensions-dialog-box
+
+## 使い方
+
+1. VSCodeの［View - Open View］から［Outline］を選択。  
+Outline View が表示される。
+2. VSCodeのExplorerで「*spec.rb」ファイルを開く。  
+Outline View に現在編集中ファイルのアウトラインが表示される。
 
 ## 表示対応ブロック
 
@@ -26,5 +34,5 @@ https://learn.microsoft.com/ja-jp/visualstudio/ide/finding-and-using-visual-stud
 |it|Method|
 |it_behaves_like|Method|
 |shared_examples|Module|
-|shared_examples_for|Method|
-|shared_context|Method|
+|shared_examples_for|Module|
+|shared_context|Module|
