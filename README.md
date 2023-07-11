@@ -12,8 +12,11 @@ rspecのアウトラインを表示する拡張機能です。
 ## インストール方法
 
 1. Releasesから最新のvsixファイルをダウンロード
-2. 以下の手順を参考に、vsixファイルをVSCodeにインストール  
-https://learn.microsoft.com/ja-jp/visualstudio/ide/finding-and-using-visual-studio-extensions?view=vs-2022#install-without-using-the-manage-extensions-dialog-box
+2. VSCode でCtrl+Shift+Pキーを押す  
+コマンドパレットが開く
+3. 「vsix」と入力してEnterキーを押す  
+インストールするvsixファイルを選択する画面が開く
+4. ダウンロードしたvsixファイルを選択して、Installをクリック
 
 ## 使い方
 
