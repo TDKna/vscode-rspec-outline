@@ -26,6 +26,8 @@ export class RspecDocumentSymbolProvider implements vscode.DocumentSymbolProvide
 		const blockGroup = Object.keys(blockType2SymbolKind).join('|');
 		const blockRegex = new RegExp(`^(\\s*)(${blockGroup}) \'(.+)\'`);
 
+		const hideBlockNameLabel = vscode.workspace.getConfiguration('vscode-rspec-outline').get('hideBlockNameLabel', false);
+
 		for (let i = 0; i < document.lineCount; i++) {
 			const line = document.lineAt(i).text;
 			const match = line.match(blockRegex);
@@ -45,10 +47,16 @@ export class RspecDocumentSymbolProvider implements vscode.DocumentSymbolProvide
 				continue;
 			}
 
-			const name = type + ' ' + text;
+			let name = type + ' ' + text;
+			let desc = ' '
+			if (hideBlockNameLabel) {
+				desc = name;
+				name = text;
+			}
+
 			const indent = match[1].length;
 			const range = new vscode.Range(i, indent, i, line.length);
-			const symbol = new vscode.DocumentSymbol(name, '', kind, range, range);
+			const symbol = new vscode.DocumentSymbol(name, ' ', kind, range, range);
 
 			const parentSymbol = this.findParentSymbol(symbol, allSymbols);
 			if (parentSymbol !== null) {
