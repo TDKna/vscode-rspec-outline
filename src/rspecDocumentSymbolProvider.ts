@@ -48,15 +48,15 @@ export class RspecDocumentSymbolProvider implements vscode.DocumentSymbolProvide
 			}
 
 			let name = type + ' ' + text;
-			let desc = ' '
+			let desc = ''
 			if (hideBlockNameLabel) {
-				desc = name;
 				name = text;
+				desc = type;
 			}
 
 			const indent = match[1].length;
 			const range = new vscode.Range(i, indent, i, line.length);
-			const symbol = new vscode.DocumentSymbol(name, ' ', kind, range, range);
+			const symbol = new vscode.DocumentSymbol(name, desc, kind, range, range);
 
 			const parentSymbol = this.findParentSymbol(symbol, allSymbols);
 			if (parentSymbol !== null) {
