@@ -27,7 +27,7 @@ Outline View に現在編集中ファイルのアウトラインが表示され�
 
 ## 設定項目
 
-### Display Block Name Label
+### Display Block Name On Label
 
 アウトラインの見出しにブロック名を表示するかを設定します。オフの場合は補足部分にブロック名を表示します。  
 初期値はオフです。
@@ -41,6 +41,7 @@ Outline View に現在編集中ファイルのアウトラインが表示され�
 |describe|Namespace|
 |context|Event|
 |include_context|Event|
+|include_examples|Event|
 |it|Method|
 |it_behaves_like|Method|
 |shared_examples|Module|

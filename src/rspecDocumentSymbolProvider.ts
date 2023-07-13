@@ -4,6 +4,7 @@ const blockName2SymbolKind: {[blockName: string]: vscode.SymbolKind} = {
 	'describe': vscode.SymbolKind.Namespace,
 	'context': vscode.SymbolKind.Event,
 	'include_context': vscode.SymbolKind.Event,
+	'include_examples': vscode.SymbolKind.Event,
 	'it': vscode.SymbolKind.Method,
 	'it_behaves_like': vscode.SymbolKind.Method,
 	'shared_examples': vscode.SymbolKind.Module,

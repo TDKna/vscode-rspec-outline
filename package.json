@@ -24,7 +24,7 @@
       "properties": {
         "vscode-rspec-outline.displayBlockNameOnLabel": {
           "type": "boolean",
-          "description": "Display the block name from the label.",
+          "description": "Display the block name on the label.",
           "default": false
         }
       }
