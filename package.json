@@ -22,9 +22,9 @@
     "configuration": {
       "title": "VSCode Rspec Outline",
       "properties": {
-        "vscode-rspec-outline.hideBlockNameLabel": {
+        "vscode-rspec-outline.displayBlockNameOnLabel": {
           "type": "boolean",
-          "description": "Hide the block name label.",
+          "description": "Display the block name from the label.",
           "default": false
         }
       }
