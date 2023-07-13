@@ -13,6 +13,9 @@ RSpec.describe Test, type: :model do
       it '一括テストの期待値' do
       end
     end
+    context '複数行にまたがる' \
+    '見出し' do
+    end
   end
 
   describe '説明1' do
