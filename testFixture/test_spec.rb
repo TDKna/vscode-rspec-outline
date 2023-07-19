@@ -19,7 +19,7 @@ RSpec.describe Test, type: :model do
   end
 
   describe '説明1' do
-    context '条件1' do
+    context '条件1', dynamodb: true do
       it '期待値1' do
       end
     end

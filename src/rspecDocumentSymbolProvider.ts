@@ -25,7 +25,7 @@ export class RspecDocumentSymbolProvider implements vscode.DocumentSymbolProvide
 		const symbols1Depth: vscode.DocumentSymbol[] = [];
 
 		const blockGroup = Object.keys(blockName2SymbolKind).join('|');
-		const blockRegex = new RegExp(`^(\\s*)(${blockGroup}) \'(.+)\'(?:\\s*(do|\\\\))?`);
+		const blockRegex = new RegExp(`^(\\s*)(${blockGroup}) \'((?:\\\'|[^\'])*)\'(?:.*\\s*(do|\\\\))?`);
 		const multiLineNameRegex = /^(\s*)\'(.*)\'(?:\s*(do|\\))?/;
 
 		const displayBlockNameLabel = vscode.workspace.getConfiguration('vscode-rspec-outline').get('displayBlockNameOnLabel', false);
