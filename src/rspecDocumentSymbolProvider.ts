@@ -46,12 +46,15 @@ export class RspecDocumentSymbolProvider implements vscode.DocumentSymbolProvide
 
 			const indent = match[1].length;
 			let text = match[3];
-			let multiLineElement = match[4] || '';
+			if (text.length == 0) {
+				continue;
+			}
 
 			const blockStart = new vscode.Position(i, indent);
 			let blockEnd = new vscode.Position(blockStart.line, line.length);
 			let blockAreaEnd = new vscode.Position(i, line.length);
 
+			let multiLineElement = match[4] || '';
 			if (multiLineElement == '\\') {
 				while (++i < document.lineCount) {
 					line = document.lineAt(i).text;

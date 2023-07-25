@@ -28,6 +28,9 @@ RSpec.describe Test, type: :model do
       it_behaves_like '成功時の期待値'
     end
 
+    context '' do
+    end
+
     include_context '一括テスト'
   end
 end
